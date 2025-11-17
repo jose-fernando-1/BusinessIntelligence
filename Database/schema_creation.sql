@@ -96,6 +96,8 @@ CREATE TABLE IF NOT EXISTS public."Dim_Tag_Relevances"
     PRIMARY KEY (movie_id, tag_id)
 );
 
+--Relationships
+
 ALTER TABLE IF EXISTS public."Dim_Genres_Movies"
     ADD FOREIGN KEY ("genre_id")
     REFERENCES public."Dim_Genres" (genre_id) MATCH SIMPLE
